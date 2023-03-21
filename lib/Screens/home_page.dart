@@ -9,9 +9,35 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 29,
+        selectedLabelStyle: const TextStyle(color: Colors.deepOrange),
+        selectedItemColor: Colors.deepOrange,
+        items: const [
+          BottomNavigationBarItem(
+            label: " ",
+            backgroundColor: Colors.black,
+            icon: Icon(
+              Icons.home_rounded,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: " ",
+            icon: Icon(
+              Icons.headset_rounded,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: " ",
+            icon: Icon(
+              Icons.message,
+            ),
+          ),
+        ],
+      ),
       body: Container(
         color: Colors.white,
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
