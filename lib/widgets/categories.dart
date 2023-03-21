@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class Category extends StatefulWidget {
   Category({super.key, required this.category});
   final String category;
