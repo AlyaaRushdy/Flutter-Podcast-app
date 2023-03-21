@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:podcast_app/widgets/categories.dart';
-import 'package:podcast_app/widgets/searchbar.dart';
+import 'package:podcast_app/widgets/podcasts_list_and_continue_listening.dart';
+import 'package:podcast_app/widgets/search_and_categories_card.dart';
 import 'package:podcast_app/widgets/title_row.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,79 +13,31 @@ class HomePage extends StatelessWidget {
         color: Colors.white,
         padding: const EdgeInsets.all(25),
         child: Column(
-          children: [
-            const TitleRow(),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * .35,
-              margin: const EdgeInsets.symmetric(vertical: 20),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 185, 185, 185),
-                    Color.fromARGB(255, 114, 113, 113),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SearchBar(),
-                  const Divider(
-                    height: 35,
-                    thickness: .75,
-                    color: Color.fromARGB(255, 199, 199, 199),
-                  ),
-                  Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 20),
-                    child: const Text(
-                      "Your Categories",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Category(category: "UI"),
-                      Category(category: "UX"),
-                      Category(category: "Logo"),
-                    ],
-                  ),
-                  const SizedBox(height: 15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Category(category: "Art"),
-                      Category(category: "Idea"),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 5,
-                        ),
-                        width: MediaQuery.of(context).size.width / 4 - 10,
-                        padding: const EdgeInsets.all(10),
-                        child: const Text(
-                          "+",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            TitleRow(),
+            SearchAndCategoriesCard(),
+            Text(
+              "UI Podcasts",
+              style: TextStyle(
+                fontSize: 21,
               ),
             ),
+            PodcastsList(
+              title: "UI Narrative",
+              subtitle: "Podtail",
+              bgcolor: Colors.deepOrange,
+              icon: Icons.pause_rounded,
+              image: "images/img1.png",
+            ),
+            PodcastsList(
+              title: "UX Podcast",
+              subtitle: "Announcer Name",
+              bgcolor: Colors.grey,
+              icon: Icons.play_arrow_rounded,
+              image: "images/img2.png",
+            ),
+            ContinueListining(),
           ],
         ),
       ),
