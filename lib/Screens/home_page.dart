@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:podcast_app/widgets/home page widgets/podcasts_list_and_continue_listening.dart';
-import 'package:podcast_app/widgets/home page widgets/search_and_categories_card.dart';
-import 'package:podcast_app/widgets/home page widgets/title_row.dart';
+import 'package:podcast_app/widgets/HomePageWidgets/podcasts_list_and_continue_listening.dart';
+import 'package:podcast_app/widgets/HomePageWidgets/search_and_categories_card.dart';
+import 'package:podcast_app/widgets/HomePageWidgets/title_row.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:podcast_app/widgets/home page widgets/categories.dart';
-import 'package:podcast_app/widgets/home page widgets/searchbar.dart';
+import 'package:podcast_app/widgets/HomePageWidgets/categories.dart';
+import 'package:podcast_app/widgets/HomePageWidgets/searchbar.dart';
 
 class SearchAndCategoriesCard extends StatelessWidget {
   const SearchAndCategoriesCard({
