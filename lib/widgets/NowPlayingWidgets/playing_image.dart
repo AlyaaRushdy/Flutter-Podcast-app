@@ -8,7 +8,7 @@ class PlayingImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 45, bottom: 25),
+      margin: const EdgeInsets.only(top: 30, bottom: 25),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

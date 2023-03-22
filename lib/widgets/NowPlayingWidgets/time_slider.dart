@@ -16,7 +16,7 @@ class _TimeSliderState extends State<TimeSlider> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 50, bottom: 30),
+      margin: const EdgeInsets.only(top: 35, bottom: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
